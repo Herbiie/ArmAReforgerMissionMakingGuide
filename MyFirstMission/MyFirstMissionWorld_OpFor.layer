@@ -65,4 +65,52 @@ $grp SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad
    "attack1"
   }
  }
+ {
+  coords 7249.853 122.595 5180.748
+  m_aStaticWaypoints {
+   "attack1"
+  }
+ }
+ {
+  coords 7266.573 119.081 5617.904
+  m_aStaticWaypoints {
+   "attack1"
+  }
+ }
+ {
+  coords 7517.779 113.747 5020.861
+  m_aStaticWaypoints {
+   "attack1"
+  }
+ }
+ {
+  coords 7269.918 119.204 5657.501
+  m_aStaticWaypoints {
+   "attack1"
+  }
+ }
+ {
+  coords 7527.032 118.789 4986.755
+  m_aStaticWaypoints {
+   "attack1"
+  }
+ }
+ {
+  coords 7543.167 121.404 4942.876
+  m_aStaticWaypoints {
+   "attack1"
+  }
+ }
+ {
+  coords 7316.361 123.329 5149.143
+  m_aStaticWaypoints {
+   "attack1"
+  }
+ }
+ {
+  coords 7179.627 121.327 5232.002
+  m_aStaticWaypoints {
+   "attack1"
+  }
+ }
 }
