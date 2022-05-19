@@ -20,31 +20,31 @@ $grp SCR_DefendWaypoint : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Def
 }
 $grp SCR_AIGroup : "{DDF3799FA1387848}Prefabs/Groups/BLUFOR/Group_US_RifleSquad.et" {
  {
-  coords 7546.846 82.809 5458.292
+  coords 7546.845 0 5458.292
   m_aStaticWaypoints {
    "defend1"
   }
  }
  {
-  coords 7635.395 79.646 5501.038
+  coords 7635.395 0 5501.037
   m_aStaticWaypoints {
    "defend2"
   }
  }
  {
-  coords 7522.807 82.987 5515.006
+  coords 7522.807 0 5515.006
   m_aStaticWaypoints {
    "defend3"
   }
  }
  {
-  coords 7518.057 80.845 5606.856
+  coords 7518.056 0 5606.856
   m_aStaticWaypoints {
    "defend4"
   }
  }
  {
-  coords 7591.496 80.095 5595.467
+  coords 7591.495 0 5595.467
   m_aStaticWaypoints {
    "defend5"
   }
