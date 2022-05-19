@@ -12,7 +12,7 @@ SCR_AIGroup : "{A2F75E45C66B1C0A}Prefabs/Groups/OPFOR/Group_USSR_MachineGunTeam.
 }
 $grp SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et" {
  {
-  coords 7557.735 103.038 5184.166
+  coords 7566.877 101.759 5191.807
   m_aStaticWaypoints {
    "attack1"
   }
@@ -24,31 +24,31 @@ $grp SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad
   }
  }
  {
-  coords 7473.807 111.566 5197.948
+  coords 7476.877 110.26 5196.238
   m_aStaticWaypoints {
    "attack1"
   }
  }
  {
-  coords 7547.221 126.214 5153.562
+  coords 7535.116 102.582 5149.147
   m_aStaticWaypoints {
    "attack1"
   }
  }
  {
-  coords 7497.969 136.292 5142.218
+  coords 7488.366 115.847 5148.73
   m_aStaticWaypoints {
    "attack1"
   }
  }
  {
-  coords 7451.829 142.882 5169.313
+  coords 7442.065 119.105 5163.248
   m_aStaticWaypoints {
    "attack1"
   }
  }
  {
-  coords 7188.507 135.49 5517.362
+  coords 7196.25 119.408 5509.247
   m_aStaticWaypoints {
    "attack1"
   }
@@ -60,7 +60,7 @@ $grp SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad
   }
  }
  {
-  coords 7208.897 115.059 5773.473
+  coords 7208.896 99.617 5773.473
   m_aStaticWaypoints {
    "attack1"
   }
