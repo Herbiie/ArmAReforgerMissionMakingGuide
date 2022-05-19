@@ -1,0 +1,12 @@
+SubScene {
+ Parent "worlds/Eden/Eden.ent"
+}
+Layer System {
+ Index 0
+}
+Layer BluFor {
+ Index 1
+}
+Layer OpFor {
+ Index 2
+}

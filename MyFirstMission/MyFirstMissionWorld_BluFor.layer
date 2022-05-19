@@ -1,0 +1,52 @@
+SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
+ coords 7602.854 80.094 5591.048
+}
+$grp SCR_DefendWaypoint : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
+ defend1 {
+  coords 7546.614 82.782 5464.883
+ }
+ defend2 {
+  coords 7636 83.585 5498.758
+ }
+ defend3 {
+  coords 7521.986 83.255 5511.934
+ }
+ defend4 {
+  coords 7528.773 80.845 5608.381
+ }
+ defend5 {
+  coords 7594.614 80.095 5590.393
+ }
+}
+$grp SCR_AIGroup : "{DDF3799FA1387848}Prefabs/Groups/BLUFOR/Group_US_RifleSquad.et" {
+ {
+  coords 7546.846 82.809 5458.292
+  m_aStaticWaypoints {
+   "defend1"
+  }
+ }
+ {
+  coords 7635.395 79.646 5501.038
+  m_aStaticWaypoints {
+   "defend2"
+  }
+ }
+ {
+  coords 7522.807 82.987 5515.006
+  m_aStaticWaypoints {
+   "defend3"
+  }
+ }
+ {
+  coords 7518.057 80.845 5606.856
+  m_aStaticWaypoints {
+   "defend4"
+  }
+ }
+ {
+  coords 7591.496 80.095 5595.467
+  m_aStaticWaypoints {
+   "defend5"
+  }
+ }
+}
