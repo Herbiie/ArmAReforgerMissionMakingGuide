@@ -1,0 +1,78 @@
+$grp SCR_BaseTriggerEntity {
+ steve {
+  coords 7584.018 81.405 5511.98
+  userScript "	    protected int m_iCount; // keep count of enemies"\
+  "    "\
+  "    // Set up the filter"\
+  "    override bool ScriptedEntityFilterForQuery(IEntity ent) {"\
+  "        SCR_ChimeraCharacter cc = SCR_ChimeraCharacter.Cast(ent);"\
+  "        if (!cc) return false; // If the entity is not a person, filter it out"\
+  "        if (cc.GetFactionKey() != \"USSR\") return false; // If the entity does not have the Faction key of USSR, filter it out"\
+  "        if (!IsAlive(cc)) return false; // If the entity is dead, filter it out"\
+  "        return true; // Otherwise, include it!"\
+  "    }"\
+  "    "\
+  "    override void OnActivate(IEntity ent)"\
+  "    {"\
+  "        ++m_iCount; // When activated (i.e. when an alive USSR soldier entity enters), add 1 to the number m_iCount"\
+  "    }"\
+  "    "\
+  "    override void OnDeactivate(IEntity ent)"\
+  "    {        "\
+  "        --m_iCount; // When deactivated (i.e. if the soldier leaves or dies) take away 1 to the number m_iCount"\
+  "        if (m_iCount <= 0) // if m_iCount is now at 0 (or less than 0), run the OnEmptied function below"\
+  "            OnEmptied();"\
+  "    }"\
+  "    "\
+  "    void OnEmptied()"\
+  "    {"\
+  "        SCR_BaseGameMode gameMode = SCR_BaseGameMode.Cast(GetGame().GetGameMode()); // Get the game mode for the end script"\
+  "        Faction faction = GetGame().GetFactionManager().GetFactionByKey(\"US\"); // Get the winning faction Key"\
+  "        int usIndex = GetGame().GetFactionManager().GetFactionIndex(faction); // Get the winning faction key's index"\
+  "        gameMode.EndGameMode(SCR_GameModeEndData.CreateSimple(SCR_GameModeEndData.ENDREASON_EDITOR_FACTION_VICTORY, -1, usIndex)); // End the mission!"\
+  "    }"
+  TriggerShapeType Sphere
+  SphereRadius 500
+  TriggerActivationType "All changes"
+  PeriodicQueries 1
+  UpdatePeriod 0.1
+ }
+ fred {
+  coords 7575.812 82.547 5516.774
+  userScript "	protected int m_iCount2; // keep count of enemies"\
+  "    "\
+  "    // Set up the filter"\
+  "    override bool ScriptedEntityFilterForQuery(IEntity ent) {"\
+  "        SCR_ChimeraCharacter cc = SCR_ChimeraCharacter.Cast(ent);"\
+  "        if (!cc) return false; // If the entity is not a person, filter it out"\
+  "        if (cc.GetFactionKey() != \"US\") return false; // If the entity does not have the Faction key of USSR, filter it out"\
+  "        if (!IsAlive(cc)) return false; // If the entity is dead, filter it out"\
+  "        return true; // Otherwise, include it!"\
+  "    }"\
+  "    "\
+  "    override void OnActivate(IEntity ent)"\
+  "    {"\
+  "        ++m_iCount2; // When activated (i.e. when an alive USSR soldier entity enters), add 1 to the number m_iCount"\
+  "    }"\
+  "    "\
+  "    override void OnDeactivate(IEntity ent)"\
+  "    {        "\
+  "        --m_iCount2; // When deactivated (i.e. if the soldier leaves or dies) take away 1 to the number m_iCount"\
+  "        if (m_iCount2 <= 0) // if m_iCount is now at 0 (or less than 0), run the OnEmptied function below"\
+  "            OnEmptied();"\
+  "    }"\
+  "    "\
+  "    void OnEmptied()"\
+  "    {"\
+  "        SCR_BaseGameMode gameMode = SCR_BaseGameMode.Cast(GetGame().GetGameMode()); // Get the game mode for the end script"\
+  "        Faction faction = GetGame().GetFactionManager().GetFactionByKey(\"USSR\"); // Get the winning faction Key"\
+  "        int ussrIndex = GetGame().GetFactionManager().GetFactionIndex(faction); // Get the winning faction key's index"\
+  "        gameMode.EndGameMode(SCR_GameModeEndData.CreateSimple(SCR_GameModeEndData.ENDREASON_EDITOR_FACTION_VICTORY, -1, ussrIndex)); // End the mission!"\
+  "    }"
+  TriggerShapeType Sphere
+  SphereRadius 150
+  TriggerActivationType "All changes"
+  PeriodicQueries 1
+  UpdatePeriod 0.1
+ }
+}

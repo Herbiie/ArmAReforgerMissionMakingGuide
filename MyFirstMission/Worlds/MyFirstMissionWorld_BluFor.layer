@@ -1,5 +1,5 @@
 SCR_SpawnPoint : "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et" {
- coords 7602.854 80.094 5591.048
+ coords 7612.089 80.093 5587.977
 }
 $grp SCR_DefendWaypoint : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Defend.et" {
  defend1 {
@@ -20,47 +20,33 @@ $grp SCR_DefendWaypoint : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Def
 }
 $grp SCR_AIGroup : "{DDF3799FA1387848}Prefabs/Groups/BLUFOR/Group_US_RifleSquad.et" {
  {
-  coords 7546.845 0 5458.292
+  coords 7546.843 85.434 5458.292
   m_aStaticWaypoints {
    "defend1"
   }
  }
  {
-  coords 7635.395 0 5501.037
+  coords 7635.394 79.646 5501.036
   m_aStaticWaypoints {
    "defend2"
   }
  }
  {
-  coords 7522.807 0 5515.006
+  coords 7522.806 84.809 5515.006
   m_aStaticWaypoints {
    "defend3"
   }
  }
  {
-  coords 7518.056 0 5606.856
+  coords 7518.055 82.791 5606.853
   m_aStaticWaypoints {
    "defend4"
   }
  }
  {
-  coords 7591.495 0 5595.467
+  coords 7591.494 80.094 5595.467
   m_aStaticWaypoints {
    "defend5"
-  }
- }
-}
-$grp SCR_AIGroup : "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et" {
- {
-  coords 7244.501 123.149 5220.948
-  m_aStaticWaypoints {
-   "attack1"
-  }
- }
- {
-  coords 7286.264 123.197 5187.451
-  m_aStaticWaypoints {
-   "attack1"
   }
  }
 }

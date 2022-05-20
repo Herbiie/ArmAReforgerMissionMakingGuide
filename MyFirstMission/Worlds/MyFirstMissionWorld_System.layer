@@ -17,6 +17,7 @@ SCR_BaseGameMode GameMode_Plain1 : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/Gam
  components {
   SCR_AutomaticRespawnHandlerComponent "{56B4EA4DA0EEFF85}" {
    m_iForcedFaction 0
+   m_iForcedLoadout 4
   }
  }
  coords 7671.535 71.75 5513.585
