@@ -13,17 +13,43 @@ SCR_AIWorld : "{E0A05C76552E7F58}Prefabs/AI/SCR_AIWorld.et" {
 PerceptionManager PerceptionManager1 : "{028DAEAD63E056BE}Prefabs/World/Game/PerceptionManager.et" {
  coords 7688.075 67.801 5462.444
 }
-SCR_BaseGameMode GameMode_Plain1 : "{1B76F75A3175E85C}Prefabs/MP/Modes/Plain/GameMode_Plain.et" {
- components {
-  SCR_AutomaticRespawnHandlerComponent "{56B4EA4DA0EEFF85}" {
-   m_iForcedFaction 0
-   m_iForcedLoadout 4
-  }
- }
- coords 7671.535 71.75 5513.585
-}
 SCR_FactionManager FactionManager_USxUSSR1 : "{589540B35EBA8CDC}Prefabs/MP/Managers/Factions/FactionManager_USxUSSR.et" {
  coords 7681.531 63.702 5567.507
+ Factions {
+  SCR_Faction "{56B2B46E9AF80999}" {
+   m_bIsPlayable 0
+  }
+ }
+}
+SCR_BaseGameMode GameMode_Herb_COOP1 : "{BF32F1CDBF2DE7C3}Prefabs/MP/Modes/Plain/GameMode_Herb_COOP.et" {
+ components {
+  SCR_RespawnBriefingComponent "{596945B77A6CD807}" {
+   m_Info SCR_UIInfo "{596ACE87F5DC8CBD}" {
+    Name "UIInfo"
+    Description "The town of Laruns is coming under attack by an infantry company of the USSR. A US rifle platoon is deployed to the town to defend it at all costs.<br/>"\
+    "It must be important, otherwise why would you be defending it? Duh.<br/>"\
+    "If you get hurt, hurt 'em back. If you die, walk it off."
+   }
+   m_aGameModeHints {
+    SCR_UIInfo "{596ACE815C0738D0}" {
+     Name "Doors and corners, kid"
+     Description "When you're entering a building make sure you're extra cautious when going through doors or around corners."
+     Icon "{324E923535DCACF8}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_1_UI.edds"
+    }
+    SCR_UIInfo "{596ACE82D8BA2693}" {
+     Name "Cover vs Concealment"
+     Description "Remember, just because the enemy can't see you doesn't meant they can't shoot you if they know you're there."
+     Icon "{3C50D67D082BA322}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_2_UI.edds"
+    }
+    SCR_UIInfo "{596ACE820A8BBE23}" {
+     Name "Watch your flanks"
+     Description "Don't get tunnel vision, remember the AI will move through buildings and climb over walls now!"
+     Icon "{39A515BAE3795994}UI/Textures/DeployMenu/Briefing/conflict_HintBanner_3_UI.edds"
+    }
+   }
+  }
+ }
+ coords 7616.432 77.039 5635.22
 }
 HitRegistrationManager HitRegManager1 : "{0EDA3D48791120DD}Prefabs/MP/HitRegManager.et" {
  coords 7692.845 66.779 5502.253

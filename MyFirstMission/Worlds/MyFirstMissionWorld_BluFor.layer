@@ -14,9 +14,6 @@ $grp SCR_DefendWaypoint : "{93291E72AC23930F}Prefabs/AI/Waypoints/AIWaypoint_Def
  defend4 {
   coords 7528.773 80.845 5608.381
  }
- defend5 {
-  coords 7594.614 80.095 5590.393
- }
 }
 $grp SCR_AIGroup : "{DDF3799FA1387848}Prefabs/Groups/BLUFOR/Group_US_RifleSquad.et" {
  {
@@ -41,12 +38,6 @@ $grp SCR_AIGroup : "{DDF3799FA1387848}Prefabs/Groups/BLUFOR/Group_US_RifleSquad.
   coords 7518.055 82.791 5606.853
   m_aStaticWaypoints {
    "defend4"
-  }
- }
- {
-  coords 7591.494 80.094 5595.467
-  m_aStaticWaypoints {
-   "defend5"
   }
  }
 }

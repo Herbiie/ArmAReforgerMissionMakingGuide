@@ -20,7 +20,7 @@ $grp SCR_BaseTriggerEntity {
   "    override void OnDeactivate(IEntity ent)"\
   "    {        "\
   "        --m_iCount; // When deactivated (i.e. if the soldier leaves or dies) take away 1 to the number m_iCount"\
-  "        if (m_iCount <= 0) // if m_iCount is now at 0 (or less than 0), run the OnEmptied function below"\
+  "        if (m_iCount <= 5) // if m_iCount is now at 5 (or less than 5), run the OnEmptied function below. Change this from 0 to avoid the endless hunt for the last few Ivans"\
   "            OnEmptied();"\
   "    }"\
   "    "\
