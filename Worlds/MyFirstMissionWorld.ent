@@ -1,18 +1,3 @@
 SubScene {
- Parent "worlds/Eden/Eden.ent"
-}
-Layer System {
- Index 0
-}
-Layer BluFor {
- Index 1
-}
-Layer OpFor {
- Index 2
-}
-Layer triggers {
- Index 3
-}
-Layer Managers {
- Index 4
+ Parent "{1EA95DAE3230BEB0}worlds/Cain/Cain.ent"
 }

@@ -1,0 +1,49 @@
+GenericEntity Phase0Area : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ coords 9348.097 108.228 9886.896
+ {
+  GenericEntity Phase0Layer : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   coords 0 0 0
+   {
+    $grp GenericEntity : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+     Spawn1Slot {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+       }
+      }
+      coords 0 0 0
+     }
+     HumveeSlot {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sObjectToSpawn "{3EA6F47D95867114}Prefabs/Vehicles/Wheeled/M998/M1025_armed_M2HB.et"
+       }
+      }
+      coords 4.046 0.999 -4.918
+      angles 0 45.342 0
+     }
+     TentSlot {
+      components {
+       SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+        m_sObjectToSpawn "{01AE5FD77A9A4C21}Prefabs/Structures/Military/Camps/TentSmallUS_01/TentSmallUS_01.et"
+       }
+      }
+      coords 4.813 0.664 1.778
+      angles 0 -35.203 0
+     }
+    }
+    GenericEntity SpawnMarkerSlot : "{E537867C6E760514}Prefabs/Systems/ScenarioFramework/Components/SlotMarker.et" {
+     components {
+      SCR_ScenarioFrameworkSlotMarker "{5EA2BD9901E5E82E}" {
+       m_MapMarkerType SCR_ScenarioFrameworkMarkerMilitary "{68636CB2989A0F0B}" {
+        m_sMapMarkerText "Spawn Point"
+        m_eMapMarkerType1Modifier RESPAWN
+       }
+      }
+     }
+     coords 0 0 0
+    }
+   }
+  }
+ }
+}

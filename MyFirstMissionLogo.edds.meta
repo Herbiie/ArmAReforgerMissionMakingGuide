@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{C98BBA965BBC79F0}preview.edds"
+ Name "{4B3816E16BA08BC9}MyFirstMissionLogo.edds"
  Configurations {
   JPGResourceClass PC : "{DC555BD399D92412}Configs/System/ResourceTypes/PC/TextureUnspecified.conf" {
   }
@@ -8,6 +8,8 @@ MetaFileClass {
   JPGResourceClass XBOX_SERIES : "{D28E01700D90F52C}Configs/System/ResourceTypes/XBOX_SERIES/TextureUnspecified.conf" {
   }
   JPGResourceClass PS4 : "{C6CD3D8752652D2A}Configs/System/ResourceTypes/PS4/TextureUnspecified.conf" {
+  }
+  JPGResourceClass PS5 : "{6248F71B9D7C1E93}Configs/System/ResourceTypes/PS5/TextureUnspecified.conf" {
   }
   JPGResourceClass HEADLESS : "{699C82A6807668A7}Configs/System/ResourceTypes/HEADLESS/TextureUnspecified.conf" {
   }

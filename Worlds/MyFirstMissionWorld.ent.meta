@@ -1,5 +1,5 @@
 MetaFileClass {
- Name "{FE0563FF1428E71E}My_First_Mission_World.ent"
+ Name "{D71AC71080A0E5E6}Worlds/MyFirstMissionWorld.ent"
  Configurations {
   ENTResourceClass PC {
   }
@@ -8,6 +8,8 @@ MetaFileClass {
   ENTResourceClass XBOX_SERIES : PC {
   }
   ENTResourceClass PS4 : PC {
+  }
+  ENTResourceClass PS5 : PC {
   }
   ENTResourceClass HEADLESS : PC {
   }

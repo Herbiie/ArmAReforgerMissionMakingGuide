@@ -1,0 +1,148 @@
+GenericEntity Phase1Area : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+ components {
+  SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
+   m_sFactionKey "US"
+  }
+ }
+ coords 9655.524 132.4 10007.342
+ {
+  $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
+   DefendGroup {
+    coords 0 0 0
+    {
+     GenericEntity Group1 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et"
+        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{68637818E0605158}" {
+         m_aLayerName {
+          "DefendWP"
+         }
+        }
+       }
+      }
+      coords 0 0 0
+     }
+     GenericEntity DefendWP : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      components {
+       SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+        m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{6863781759ECBBBE}" {
+         m_fCompletionRadius 75
+        }
+       }
+      }
+      coords -20.542 -2.088 32.725
+     }
+    }
+   }
+   PatrolGroup {
+    coords 0 0 0
+    {
+     GenericEntity Group2 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+      components {
+       SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+        m_sObjectToSpawn "{CB58D90EA14430AD}Prefabs/Groups/OPFOR/Group_USSR_SentryTeam.et"
+        m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{6863780470BCC48F}" {
+         m_aLayerName {
+          "patrolwp1"
+          "patrolwp2"
+          "patrolwp3"
+          "patrolwp4"
+          "patrolCycle"
+         }
+        }
+        m_eAIGroupFormation Column
+       }
+      }
+      coords -5.193 -1.611 -72.028
+     }
+     $grp GenericEntity : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+      patrolwp1 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{6863781C971138A1}" {
+         }
+        }
+       }
+       coords -32.349 -1.496 -63.005
+      }
+      patrolwp2 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{6863781CDEA8EA9B}" {
+         }
+        }
+       }
+       coords -133.49 -3.163 46.363
+      }
+      patrolwp3 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{6863781CD3F5A302}" {
+         }
+        }
+       }
+       coords 23.516 -2.021 142.815
+      }
+      patrolwp4 {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointPatrol "{6863781CC916FDE7}" {
+         }
+        }
+       }
+       coords 91.036 -11.128 14.961
+      }
+      patrolCycle {
+       components {
+        SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+         m_Waypoint SCR_ScenarioFrameworkWaypointCycle "{6863781CEB5B2574}" {
+          m_aLayersWithWaypointsToCycle {
+           "patrolwp1"
+           "patrolwp2"
+           "patrolwp3"
+           "patrolwp4"
+          }
+         }
+        }
+       }
+       coords -14.898 0.911 -24.275
+      }
+     }
+    }
+   }
+  }
+  GenericEntity ObjectiveGoldTask : "{CDC0845AD90BA073}Prefabs/Systems/ScenarioFramework/Components/LayerTaskClearArea.et" {
+   components {
+    SCR_ScenarioFrameworkLayerTaskClearArea "{5A6513F46D132331}" {
+     m_sFactionKey "US"
+     m_sTaskTitle "Objective Gold"
+     m_sTaskDescription "Clear the enemy from the village of Langonnet, codename Objective Gold"
+     m_aTriggerActionsOnFinish {
+      SCR_ScenarioFrameworkActionEndMission "{6863781E70D14C38}" {
+       m_bOverrideGameOverType 1
+       m_eOverriddenGameOverType EDITOR_FACTION_VICTORY
+      }
+     }
+    }
+   }
+   coords 0 0 0
+   {
+    GenericEntity ObjectiveGoldTaskSlot : "{E53456990A756229}Prefabs/Systems/ScenarioFramework/Components/SlotClearArea.et" {
+     components {
+      SCR_ScenarioFrameworkSlotClearArea "{5A633AF525D5B972}" {
+       m_sFactionKey "US"
+       m_aPlugins {
+        SCR_ScenarioFrameworkPluginTrigger "{5A633AF5368D26A3}" {
+         m_fAreaRadius 100
+         m_sActivatedByThisFaction "US"
+        }
+       }
+      }
+     }
+     coords -25.205 -1.913 37.014
+    }
+   }
+  }
+ }
+}
