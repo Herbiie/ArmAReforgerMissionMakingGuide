@@ -1,4 +1,4 @@
-GenericEntity Phase1Area : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
+GenericEntity ObjectivesArea : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/Components/Area.et" {
  components {
   SCR_ScenarioFrameworkArea "{59E8CDC50969206E}" {
    m_sFactionKey "US"
@@ -6,6 +6,64 @@ GenericEntity Phase1Area : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
  }
  coords 9655.524 132.4 10007.342
  {
+  GenericEntity ObjectiveSilver : "{5EDF39860639027D}Prefabs/Systems/ScenarioFramework/Components/LayerTaskDestroy.et" {
+   components {
+    SCR_ScenarioFrameworkLayerTaskDestroy "{5A6513F41BA457C8}" {
+     m_eActivationType ON_TRIGGER_ACTIVATION
+     m_sTaskTitle "Objective Silver"
+     m_sTaskDescription "Destroy the USSR Command Truck at Objective Silver"
+     m_aTriggerActionsOnFinish {
+      SCR_ScenarioFrameworkActionEndMission "{68652215583F631F}" {
+       m_bOverrideGameOverType 1
+       m_eOverriddenGameOverType EDITOR_FACTION_VICTORY
+      }
+     }
+    }
+   }
+   coords 962.044 -1.322 312.954
+   {
+    GenericEntity ObjectiveSilverTaskSlot : "{7586595959BA2D99}Prefabs/Systems/ScenarioFramework/Components/SlotDestroy.et" {
+     components {
+      SCR_ScenarioFrameworkSlotDestroy "{5A22E1D6276BD209}" {
+       m_sObjectToSpawn "{1BABF6B33DA0AEB6}Prefabs/Vehicles/Wheeled/Ural4320/Ural4320_command.et"
+      }
+     }
+     coords 0 0 0
+    }
+    GenericEntity Group3 : "{8D43830F02C3F114}Prefabs/Systems/ScenarioFramework/Components/SlotAI.et" {
+     components {
+      SCR_ScenarioFrameworkSlotAI "{5A26B3E02AC77BA0}" {
+       m_sObjectToSpawn "{E552DABF3636C2AD}Prefabs/Groups/OPFOR/Group_USSR_RifleSquad.et"
+       m_WaypointSet SCR_ScenarioFrameworkWaypointSet "{68652212CE661F9F}" {
+        m_aLayerName {
+         "DeendWP2"
+        }
+       }
+       m_bBalanceOnPlayersCount 1
+       m_iMinUnitsInGroup 2
+      }
+     }
+     coords 6.819 -0.407 1.649
+    }
+    GenericEntity Spawn2Slot : "{AA01691FDC4E9167}Prefabs/Systems/ScenarioFramework/Components/Slot.et" {
+     components {
+      SCR_ScenarioFrameworkSlotBase "{5A22E1D67E712EC8}" {
+       m_sObjectToSpawn "{5A2220DD0C16958B}Prefabs/MP/Spawning/SpawnPoint_US.et"
+      }
+     }
+     coords -1005.964 -0.093 -280.394
+    }
+    GenericEntity DefendWP2 : "{EBD91177954E8236}Prefabs/Systems/ScenarioFramework/Components/SlotWaypoint.et" {
+     components {
+      SCR_ScenarioFrameworkSlotWaypoint "{5EEEE11FAD8EE85C}" {
+       m_Waypoint SCR_ScenarioFrameworkWaypointDefend "{68652212D5FC121A}" {
+       }
+      }
+     }
+     coords 0 0 0
+    }
+   }
+  }
   $grp GenericEntity : "{5F9FFF4BF027B3A3}Prefabs/Systems/ScenarioFramework/Components/Layer.et" {
    DefendGroup {
     coords 0 0 0
@@ -19,6 +77,8 @@ GenericEntity Phase1Area : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
           "DefendWP"
          }
         }
+        m_bBalanceOnPlayersCount 1
+        m_iMinUnitsInGroup 2
        }
       }
       coords 0 0 0
@@ -51,6 +111,7 @@ GenericEntity Phase1Area : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
           "patrolCycle"
          }
         }
+        m_bBalanceOnPlayersCount 1
         m_eAIGroupFormation Column
        }
       }
@@ -119,9 +180,10 @@ GenericEntity Phase1Area : "{C72F956E4AC6A6E7}Prefabs/Systems/ScenarioFramework/
      m_sTaskTitle "Objective Gold"
      m_sTaskDescription "Clear the enemy from the village of Langonnet, codename Objective Gold"
      m_aTriggerActionsOnFinish {
-      SCR_ScenarioFrameworkActionEndMission "{6863781E70D14C38}" {
-       m_bOverrideGameOverType 1
-       m_eOverriddenGameOverType EDITOR_FACTION_VICTORY
+      SCR_ScenarioFrameworkActionSpawnObjects "{686522151FB061F1}" {
+       m_aNameOfObjectsToSpawnOnActivation {
+        "ObjectiveSilver"
+       }
       }
      }
     }
